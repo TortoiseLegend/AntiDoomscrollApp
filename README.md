@@ -1,3 +1,4 @@
 ```
-xmake project -k .vscode/compile_commands.json
+xmake project -k compile_commands .vscode
+xmake f --mode=debug
 ```

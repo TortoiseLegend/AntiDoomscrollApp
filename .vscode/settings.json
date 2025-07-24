@@ -1,5 +1,5 @@
 {
     "C_Cpp.default.compileCommands": [
-        "${workspaceFolder}/compile_commands.json"
+        "${workspaceFolder}/.vscode/compile_commands.json"
     ]
 }//.json?
