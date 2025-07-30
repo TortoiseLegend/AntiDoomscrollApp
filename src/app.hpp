@@ -5,11 +5,11 @@
 
 class CenteredLabel{
     public:
-        int x;
-        int y;
+        int textbox_width;
         std::string text;
-
-    CenteredLabel(int x, int y, std::string text);
+        Font *font;
+    CenteredLabel(std::string text, int textbox_width, Font *font);
+    void draw(int text_x, int text_y);
 };
 
 #endif
