@@ -4,13 +4,14 @@
 
 #include <iostream>
 #include "app.hpp"
+
 int main(){
   int font_size = 25;
   int font_spacing = 1;
   const int screen_width = 800;
   const int screen_height = 600;
   const char *window_title = "Anti-Doomscroll Notification App";
-  const char *label_title = "Don't Doomscroll Nerd"
+  const char *label_title = "Don't Doomscroll Nerd";
   
 
   InitWindow(screen_width, screen_height, window_title);
@@ -27,13 +28,18 @@ int main(){
 
   while(!WindowShouldClose()){
     BeginDrawing();
-    ClearBackground(Color{0, 191, 255}); //Sets backgorund window color
+    ClearBackground(Color{255, 255, 255}); //Sets backgorund window color
 
     // Updates
 
     //Centered Label
-    DrawRectangleLinesEx(Rectangle { 15, 15, screen_width - 20, font_size + 15 }, 3, Color{255,255,255}); //Rectangle outline with thicker edge
-    centered_title.draw(15,20)
+    DrawRectangleLinesEx(
+      Rectangle { 15, 15, screen_width - 20, (float) font_size + 15 },
+      3,
+      Color{255,255,255}
+    ); 
+    // centered_title.draw(15,20);
+    DrawTextEx(font, "Hello", Vector2 {10.0, 10.0}, font_size, font_spacing, Color {0, 0, 0});
 
     // Render/Draw
     GuiLabel(Rectangle{100,100, 50, 20},"Hi, I'm a label... Or am I?");
